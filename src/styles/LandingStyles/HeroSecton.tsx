@@ -9,6 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 5% 0;
+ 
   gap: 38px;
 `;
 export const Wrapper = styled.div`
@@ -26,7 +27,7 @@ export const Wrapper = styled.div`
   @media screen and (max-width: 1000px) {
     width: 95%;
     gap: 20px;
-    flex-direction:column;<
+    flex-direction:column;
   }
 `;
 
@@ -38,7 +39,7 @@ export const CardContainer = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   border-radius: 20px;
-  background: #142d2c;
+  background: rgb(60, 62, 68);
   flex-basis: calc(33% - 20px);
   gap: 20px;
   @media screen and (max-width: 768px) {
@@ -67,6 +68,7 @@ export const HeroBody = styled.div`
   padding: 15px 10px 38px 30px;
   height: 226px;
   gap: 20px;
+  background:black;
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 768px) {
