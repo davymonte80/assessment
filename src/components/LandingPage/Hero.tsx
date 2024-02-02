@@ -1,6 +1,6 @@
-import { CardContainer, Container, HeroBody, HeroFlex, HeroGrid, ImageContainer, Wrapper } from '@/styles/LandingStyles/HeroSecton';
+import { CardContainer, Container, HeroBody, HeroFlex, HeroGrid,HeaderContainer, ImageContainer, Wrapper } from '@/styles/LandingStyles/HeroSecton';
 import Image from 'next/image';
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
 interface Post {
   id: number;
@@ -20,62 +20,60 @@ interface Post {
 }
 
 const Hero: React.FC = () => {
-  const fetchData = async () => {
-    try {
-      const response = await fetch("https://rickandmortyapi.com/api/character");
-      const data: { results: Post[] } = await response.json();
+  const [characters, setCharacters] = useState<Post[]>([]);
 
-      // Use the data directly
-      renderCharacters(data.results);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://rickandmortyapi.com/api/character"
+        );
+        const data: { results: Post[] } = await response.json();
 
-  const renderCharacters = (characters: Post[]) => {
-    console.log("miujiza", characters)
-    return (
-      <Wrapper>
-        <p>hello morty</p>
-        {characters.map((character) => (
+        // Set the characters in the state
+        setCharacters(data.results);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-      <CardContainer key={character.id}>
-          
-            <ImageContainer>
-              {/* Render your image here */}
-              <Image  src={character.image}
-                alt="picture"
-                width={300}
-                height={191}
-                priority />
-            </ImageContainer>
-            <HeroBody>
-              <HeroFlex>
-                <HeroGrid>
-                  
-                  {/* Render other details here */}
-                  <h2>{character.name}</h2>
-                  <p>{character.species}</p>
-                  {/* Add other details as needed */}
-                </HeroGrid>
-              </HeroFlex>
-            </HeroBody>
-          
-      </CardContainer>
-        ))}
-       </Wrapper>
-    );
-  };
-
-  // Call the fetchData function
-  fetchData();
+    // Call the fetchData function
+    fetchData();
+  }, []); // Empty dependency array ensures useEffect runs only once, similar to componentDidMount
 
   return (
     <Container>
-      
-        {/* Render the characters here */}
-        {renderCharacters([])}
-      
+      <Wrapper>
+        {characters.length > 0 &&
+          characters.map((character) => (
+            <CardContainer key={character.id}>
+              <ImageContainer>
+                <Image
+                  src={character.image}
+                  alt="picture"
+                  width={300}
+                  height={100}
+                  priority
+                />
+              </ImageContainer>
+              <HeroBody>
+                <HeroFlex>
+                  <HeroGrid>
+                    <p>{character.name}</p>
+                    <span></span>
+                    <HeaderContainer>
+                      <span> {character.species}</span>
+                      <br />
+                      <p>Last known locatin:</p>
+
+                    </HeaderContainer>
+                    {/* Add other details as needed */}
+                  </HeroGrid>
+                </HeroFlex>
+              </HeroBody>
+            </CardContainer>
+          ))}
+      </Wrapper>
     </Container>
   );
 };

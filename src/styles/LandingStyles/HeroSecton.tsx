@@ -9,30 +9,25 @@ export const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   padding: 5% 0;
- 
   gap: 38px;
 `;
 export const Wrapper = styled.div`
-  width: 80%;
+  width: 85%;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  overflow-x: auto;
-  overflow-y: hidden;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  gap: 38px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
   @media screen and (max-width: 1000px) {
-    width: 95%;
+    width: 100%;
     gap: 20px;
-    flex-direction:column;
+    flex-direction: column;
   }
 `;
 
 export const CardContainer = styled.div`
-  min-width: 383px;
+  min-width: 350px;
   height: 407px;
   display: flex;
   align-items: flex-start;
@@ -40,11 +35,11 @@ export const CardContainer = styled.div`
   flex-direction: column;
   border-radius: 20px;
   background: rgb(60, 62, 68);
-  flex-basis: calc(33% - 20px);
+  /* flex-basis: calc(33% - 20px); */
   gap: 20px;
   @media screen and (max-width: 768px) {
-    min-width: 300px;
-    height: 457px;
+    min-width: 350px;
+    height: 400px;
   }
   @media screen and (max-width: 300px) {
     min-width: 280px;
@@ -52,7 +47,7 @@ export const CardContainer = styled.div`
 `;
 export const ImageContainer = styled.div`
   width: 100%;
-  min-height: 191px;
+  min-height: 100px;
   overflow: hidden;
   mix-blend-mode: normal;
   img {
@@ -65,18 +60,18 @@ export const ImageContainer = styled.div`
   }
 `;
 export const HeroBody = styled.div`
-  padding: 15px 10px 38px 30px;
+  width: 100%;
+  padding: 10px;
   height: 226px;
   gap: 20px;
-  background:black;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     padding: 15px 10px 20px 10px;
-  }
+  } */
 `;
 export const HeroFlex = styled.div`
-  width: 90%;
+  min-width: 300px;
   height: auto;
   display: flex;
   align-items: center;
@@ -85,39 +80,41 @@ export const HeroFlex = styled.div`
   gap: 24px;
   @media screen and (max-width: 768px) {
     width: 90%;
+    min-width: 270px;
   }
 `;
 export const HeroGrid = styled.div`
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 5px;
   span {
-    max-width: 104px;
+    width: 100%;
     color: #1ea9a4;
-        font-size: 16px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 26.3px;
     letter-spacing: -0.8px;
   }
   p {
-    max-width: 104px;
-    color: #fff;
-    font-family: Inter
-    font-size: 28px;
+    width: max-content;
+    color: rgb(158, 158, 158);
+    font-family: Inter;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 26.3px;
     letter-spacing: -0.8px;
   }
 `;
-export const EventHeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   span {
     width: max-content;
     color: #fff;
-    font-family:inter
-    font-size: 16px;
+    font-family: inter;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 26.3px;
@@ -143,3 +140,18 @@ export const EventContent = styled.span`
   }
 `;
 
+export const Alive = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: rgb(85, 204, 68);
+  border-radius: 50%;
+  display: inline-block;
+`;
+
+export const Dead = styled.div`
+  width: 10px;
+  height: 10px;
+  background-color: rgb(214, 61, 46);
+  border-radius: 50%;
+  display: inline-block;
+`;
