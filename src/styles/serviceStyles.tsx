@@ -40,6 +40,7 @@ export const CardContainer = styled.div`
   @media screen and (max-width: 768px) {
     min-width: 350px;
     height: 400px;
+    gap: 20px;
   }
   @media screen and (max-width: 300px) {
     min-width: 280px;
@@ -91,8 +92,8 @@ export const HeroGrid = styled.div`
   gap: 5px;
   span {
     width: 100%;
-    color: #1ea9a4;
-    font-size: 16px;
+    color: #f5f5f5;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 700;
     line-height: 26.3px;
@@ -100,16 +101,29 @@ export const HeroGrid = styled.div`
   }
   p {
     width: max-content;
-    color: rgb(158, 158, 158);
+    color: #ffffff;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 26.3px;
     letter-spacing: -0.8px;
   }
+  h5 {
+    width: 100%;
+    color: rgb(158, 158, 158);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.3px;
+    letter-spacing: -0.8px;
+  }
 `;
 export const HeaderContainer = styled.div`
+  /* display : flex;
+flex-direction : column;
+gap : 5px; */
+
   span {
     width: max-content;
     color: #fff;
@@ -123,20 +137,6 @@ export const HeaderContainer = styled.div`
 
   p {
     font-family: Inter;
-  }
-`;
-export const EventContent = styled.span`
-  display: flex;
-  width: 74%;
-  color: #fff;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 26.8px;
-  letter-spacing: -0.8px;
-  @media screen and (max-width: 768px) {
-    width: 280px;
   }
 `;
 
@@ -154,4 +154,36 @@ export const Dead = styled.div`
   background-color: rgb(214, 61, 46);
   border-radius: 50%;
   display: inline-block;
+`;
+export const HomePageText = styled.span`
+  color: #0f0202;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  font-family: Inter;
+  line-height: 26.3px;
+  letter-spacing: -0.8px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+`;
+
+export const UnsplashContainer = styled.div`
+  min-width: 350px;
+  height: 200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 20px;
+  /* background: rgb(60, 62, 68); */
+  /* flex-basis: calc(33% - 20px); */
+  gap: 20px;
+  @media screen and (max-width: 768px) {
+    gap: 20px;
+  }
+  @media screen and (max-width: 300px) {
+    min-width: 280px;
+  }
 `;

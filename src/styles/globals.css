@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer components {
+    #app {
+        @apply flex flex-col min-h-full w-full;
+    } */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+       background-color: #FDFDFD;
+    }
 
-body {
-  background: white;
-  -webkit-font-smoothing: antialiased;
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+
+
+
+
+/* start */
+
+
