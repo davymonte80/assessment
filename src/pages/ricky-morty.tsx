@@ -1,4 +1,4 @@
-import Hero from "@/components/landingPage/Service";
+import Hero from "@/components/landingPage/Rick";
 import React from "react";
 
 const Ricky = () => {
