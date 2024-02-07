@@ -8,6 +8,7 @@ const router=useRouter()
 
 const NavigateToLink=()=>{
   window.open("https://github.com/davymonte80/assessment", "_blank");
+  
 }
 
   return (
@@ -24,7 +25,8 @@ const NavigateToLink=()=>{
            The Ricky & Morty API allows developers to access character information from the popular animated series.<br/>
           It&#39;s a valuable resource for creating fun applications, games, or simply exploring the vast universe of the show.<br/>
 
-          All my code is version-controlled using Git. Feel free to explore <span style={{color:"blue",cursor:"pointer"}} onClick={NavigateToLink}>my repositories.</span><br/>
+          All my code is version-controlled using Git.<br/>
+           Feel free to explore my repository/working folder <span style={{color:"blue",cursor:"pointer"}} onClick={NavigateToLink}>here.</span><br/>
 </HomePageText>
            </Wrapper>
       </Container>
