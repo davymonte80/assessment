@@ -14,10 +14,10 @@ const Homepage = () => {
             Developers can seamlessly integrate these photos into their applications, enhancing the visual <br/>
             appeal and user experience.
 
-The Ricky & Morty API allows developers to access character information from the popular animated series.<br/>
- It's a valuable resource for creating fun applications, games, or simply exploring the vast universe of the show.<br/>
+           The Ricky & Morty API allows developers to access character information from the popular animated series.<br/>
+          It&#39;s a valuable resource for creating fun applications, games, or simply exploring the vast universe of the show.<br/>
 
-All my code is version-controlled using Git. Feel free to explore my repositories
+          All my code is version-controlled using Git. Feel free to explore my repositories.<br/>
 </HomePageText>
            </Wrapper>
       </Container>
